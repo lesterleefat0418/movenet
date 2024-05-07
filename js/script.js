@@ -27,9 +27,9 @@ async function estimatePoses(video) {
 async function loadCamera() {
     const constraints = {
         video: {
-            width: 1980,
-            height: 1080,
-            aspectRatio: 1.77
+            width: 640,
+            height: 480,
+            aspectRatio: 1.33
         }
     };
     try {
