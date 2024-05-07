@@ -6,7 +6,7 @@ let overlayCtx;
 // MoveNetモデルを読み込む関数
 async function loadMoveNet() {
     try {
-        await tf.setBackend('webgpu');
+        await tf.setBackend('wasm');
         detector = await poseDetection.createDetector(
             poseDetection.SupportedModels.MoveNet,
             {
