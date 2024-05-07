@@ -1,0 +1,25 @@
+/* 動画とキャンバスを重ねるためのスタイル */
+#overlayContainer {
+    position: relative;
+    width: 100%; /* Set the container width to match the video width */
+    height: 80vh;
+  }
+  
+  /* 動画のスタイル */
+  #videoPlayer {
+    width: 100%; /* Set the video width to fill the container */
+    height: 100%; /* Set the video height to fill the container */
+    object-fit: cover; /* Preserve the aspect ratio and cover the container */
+    z-index: 1; /* Set a higher z-index to make it appear below the overlayCanvas */
+    position: relative; /* Add relative positioning to the videoPlayer */
+  }
+  
+  /* キャンバスのスタイル */
+  #overlayCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set the canvas width to fill the container */
+    height: 100%; /* Set the canvas height to fill the container */
+    z-index: 2; /* Set a lower z-index to make it appear on top of the videoPlayer */
+  }

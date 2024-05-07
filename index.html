@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TensorFlow.jsとMoveNetモデルのスクリプトを読み込む -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+    <!-- タイトル -->
+    <title>MoveNetデモ</title>
+    <!-- 自作CSS -->
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>MoveNetデモ</h1>
+
+    <table border="1">
+        <tr>
+            <td>
+                <!-- オーバーレイ用のコンテナ -->
+                <div id="overlayContainer">
+                    <!-- 動画プレーヤー要素 -->
+                    <video id="videoPlayer" width="1920" height="1080"></video>
+                    <!-- オーバーレイ用のキャンバス -->
+                    <canvas id="overlayCanvas" width="1920" height="1080"></canvas>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 自作JavaScrip -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
