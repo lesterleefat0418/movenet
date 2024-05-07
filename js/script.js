@@ -6,8 +6,12 @@ let overlayCtx;
 // MoveNetモデルを読み込む関数
 async function loadMoveNet() {
     try {
-        await tf.setBackend('webgl');
-        detector = await poseDetection.createDetector(poseDetection.SupportedModels.MoveNet);
+        await tf.setBackend('webgpu');
+        detector = await poseDetection.createDetector(
+            poseDetection.SupportedModels.MoveNet,
+            {
+                modelType: poseDetection.movenet.modelType.SINGLEPOSE_LIGHTNING,
+            });
     } catch (error) {
         console.error('MoveNet モデルの読み込みに失敗しました:', error);
     }
